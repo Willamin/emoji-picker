@@ -1,4 +1,4 @@
-# emojipicker
+# emoji-picker
 
 ## Dependencies
 
