@@ -18,11 +18,16 @@ OptionParser.parse! do |parser|
   end
 end
 
-print_list.each do |name|
-  emoji = EMOJIS[name]?
-  emoji.try do |e|
-    print e
-  end
+list = print_list.map do |name|
+  EMOJIS[name]?
 end
 
-puts
+list = list.compact
+
+list.each do |emoji|
+  print emoji
+end
+
+unless list.empty?
+  puts
+end
