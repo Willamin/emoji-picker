@@ -292,4 +292,7 @@ EMOJIS = {
   "volcano":                      "🌋",
   "milky_way":                    "🌌",
   "partly_sunny":                 "⛅️",
+  "check":                        "✅",
+  "100":                          "💯",
+  "tada":                         "🎉",
 }
