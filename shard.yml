@@ -5,7 +5,7 @@ authors:
   - Will Lewis <will@wflewis.com>
 
 targets:
-  emojipicker:
+  emoji:
     main: src/emojipicker.cr
 
 crystal: 0.27.0
