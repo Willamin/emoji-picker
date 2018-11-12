@@ -19,7 +19,7 @@ OptionParser.parse! do |parser|
 end
 
 list = print_list.map do |name|
-  EMOJIS[name]?
+  emoji(name)
 end
 
 list = list.compact
