@@ -849,6 +849,7 @@ def emoji(name : String)
   when "small_orange_diamond"            then "🔸"
   when "small_red_triangle"              then "🔺"
   when "small_red_triangle_down"         then "🔻"
+  when "check"                           then "✅"
   else                                        nil
   end
 end
