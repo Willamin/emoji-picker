@@ -1,851 +1,854 @@
-EMOJIS = {
-  "smile"                           => "😄",
-  "laughing"                        => "😆",
-  "blush"                           => "😊",
-  "smiley"                          => "😃",
-  "relaxed"                         => "☺️",
-  "smirk"                           => "😏",
-  "heart_eyes"                      => "😍",
-  "kissing_heart"                   => "😘",
-  "kissing_closed_eyes"             => "😚",
-  "flushed"                         => "😳",
-  "relieved"                        => "😌",
-  "satisfied"                       => "😆",
-  "grin"                            => "😁",
-  "wink"                            => "😉",
-  "stuck_out_tongue_winking_eye"    => "😜",
-  "stuck_out_tongue_closed_eyes"    => "😝",
-  "grinning"                        => "😀",
-  "kissing"                         => "😗",
-  "kissing_smiling_eyes"            => "😙",
-  "stuck_out_tongue"                => "😛",
-  "sleeping"                        => "😴",
-  "worried"                         => "😟",
-  "frowning"                        => "😦",
-  "anguished"                       => "😧",
-  "open_mouth"                      => "😮",
-  "grimacing"                       => "😬",
-  "confused"                        => "😕",
-  "hushed"                          => "😯",
-  "expressionless"                  => "😑",
-  "unamused"                        => "😒",
-  "sweat_smile"                     => "😅",
-  "sweat"                           => "😓",
-  "disappointed_relieved"           => "😥",
-  "weary"                           => "😩",
-  "pensive"                         => "😔",
-  "disappointed"                    => "😞",
-  "confounded"                      => "😖",
-  "fearful"                         => "😨",
-  "cold_sweat"                      => "😰",
-  "persevere"                       => "😣",
-  "cry"                             => "😢",
-  "sob"                             => "😭",
-  "joy"                             => "😂",
-  "astonished"                      => "😲",
-  "scream"                          => "😱",
-  "tired_face"                      => "😫",
-  "angry"                           => "😠",
-  "rage"                            => "😡",
-  "triumph"                         => "😤",
-  "sleepy"                          => "😪",
-  "yum"                             => "😋",
-  "mask"                            => "😷",
-  "sunglasses"                      => "😎",
-  "dizzy_face"                      => "😵",
-  "imp"                             => "👿",
-  "smiling_imp"                     => "😈",
-  "neutral_face"                    => "😐",
-  "no_mouth"                        => "😶",
-  "innocent"                        => "😇",
-  "alien"                           => "👽",
-  "yellow_heart"                    => "💛",
-  "blue_heart"                      => "💙",
-  "purple_heart"                    => "💜",
-  "heart"                           => "❤️",
-  "green_heart"                     => "💚",
-  "broken_heart"                    => "💔",
-  "heartbeat"                       => "💓",
-  "heartpulse"                      => "💗",
-  "two_hearts"                      => "💕",
-  "revolving_hearts"                => "💞",
-  "cupid"                           => "💘",
-  "sparkling_heart"                 => "💖",
-  "sparkles"                        => "✨",
-  "star"                            => "⭐️",
-  "star2"                           => "🌟",
-  "dizzy"                           => "💫",
-  "boom"                            => "💥",
-  "collision"                       => "💥",
-  "anger"                           => "💢",
-  "exclamation"                     => "❗️",
-  "question"                        => "❓",
-  "grey_exclamation"                => "❕",
-  "grey_question"                   => "❔",
-  "zzz"                             => "💤",
-  "dash"                            => "💨",
-  "sweat_drops"                     => "💦",
-  "notes"                           => "🎶",
-  "musical_note"                    => "🎵",
-  "fire"                            => "🔥",
-  "hankey"                          => "💩",
-  "poop"                            => "💩",
-  "shit"                            => "💩",
-  "+1"                              => "👍",
-  "thumbsup"                        => "👍",
-  "-1"                              => "👎",
-  "thumbsdown"                      => "👎",
-  "ok_hand"                         => "👌",
-  "punch"                           => "👊",
-  "facepunch"                       => "👊",
-  "fist"                            => "✊",
-  "v"                               => "✌️",
-  "wave"                            => "👋",
-  "hand"                            => "✋",
-  "raised_hand"                     => "✋",
-  "open_hands"                      => "👐",
-  "point_up"                        => "☝️",
-  "point_down"                      => "👇",
-  "point_left"                      => "👈",
-  "point_right"                     => "👉",
-  "raised_hands"                    => "🙌",
-  "pray"                            => "🙏",
-  "point_up_2"                      => "👆",
-  "clap"                            => "👏",
-  "muscle"                          => "💪",
-  "metal"                           => "🤘",
-  "fu"                              => "🖕",
-  "walking"                         => "🚶",
-  "runner"                          => "🏃",
-  "running"                         => "🏃",
-  "couple"                          => "👫",
-  "family"                          => "👪",
-  "two_men_holding_hands"           => "👬",
-  "two_women_holding_hands"         => "👭",
-  "dancer"                          => "💃",
-  "dancers"                         => "👯",
-  "ok_woman"                        => "🙆",
-  "no_good"                         => "🙅",
-  "information_desk_person"         => "💁",
-  "raising_hand"                    => "🙋",
-  "bride_with_veil"                 => "👰",
-  "person_with_pouting_face"        => "🙎",
-  "person_frowning"                 => "🙍",
-  "bow"                             => "🙇",
-  "couple_with_heart"               => "💑",
-  "massage"                         => "💆",
-  "haircut"                         => "💇",
-  "nail_care"                       => "💅",
-  "boy"                             => "👦",
-  "girl"                            => "👧",
-  "woman"                           => "👩",
-  "man"                             => "👨",
-  "baby"                            => "👶",
-  "older_woman"                     => "👵",
-  "older_man"                       => "👴",
-  "person_with_blond_hair"          => "👱",
-  "man_with_gua_pi_mao"             => "👲",
-  "man_with_turban"                 => "👳",
-  "construction_worker"             => "👷",
-  "cop"                             => "👮",
-  "angel"                           => "👼",
-  "princess"                        => "👸",
-  "smiley_cat"                      => "😺",
-  "smile_cat"                       => "😸",
-  "heart_eyes_cat"                  => "😻",
-  "kissing_cat"                     => "😽",
-  "smirk_cat"                       => "😼",
-  "scream_cat"                      => "🙀",
-  "crying_cat_face"                 => "😿",
-  "joy_cat"                         => "😹",
-  "pouting_cat"                     => "😾",
-  "japanese_ogre"                   => "👹",
-  "japanese_goblin"                 => "👺",
-  "see_no_evil"                     => "🙈",
-  "hear_no_evil"                    => "🙉",
-  "speak_no_evil"                   => "🙊",
-  "guardsman"                       => "💂",
-  "skull"                           => "💀",
-  "feet"                            => "🐾",
-  "lips"                            => "👄",
-  "kiss"                            => "💋",
-  "droplet"                         => "💧",
-  "ear"                             => "👂",
-  "eyes"                            => "👀",
-  "nose"                            => "👃",
-  "tongue"                          => "👅",
-  "love_letter"                     => "💌",
-  "bust_in_silhouette"              => "👤",
-  "busts_in_silhouette"             => "👥",
-  "speech_balloon"                  => "💬",
-  "thought_balloon"                 => "💭",
-  "sunny"                           => "☀️",
-  "umbrella"                        => "☔️",
-  "cloud"                           => "☁️",
-  "snowflake"                       => "❄️",
-  "snowman"                         => "⛄️",
-  "zap"                             => "⚡️",
-  "cyclone"                         => "🌀",
-  "foggy"                           => "🌁",
-  "ocean"                           => "🌊",
-  "cat"                             => "🐱",
-  "dog"                             => "🐶",
-  "mouse"                           => "🐭",
-  "hamster"                         => "🐹",
-  "rabbit"                          => "🐰",
-  "wolf"                            => "🐺",
-  "frog"                            => "🐸",
-  "tiger"                           => "🐯",
-  "koala"                           => "🐨",
-  "bear"                            => "🐻",
-  "pig"                             => "🐷",
-  "pig_nose"                        => "🐽",
-  "cow"                             => "🐮",
-  "boar"                            => "🐗",
-  "monkey_face"                     => "🐵",
-  "monkey"                          => "🐒",
-  "horse"                           => "🐴",
-  "racehorse"                       => "🐎",
-  "camel"                           => "🐫",
-  "sheep"                           => "🐑",
-  "elephant"                        => "🐘",
-  "panda_face"                      => "🐼",
-  "snake"                           => "🐍",
-  "bird"                            => "🐦",
-  "baby_chick"                      => "🐤",
-  "hatched_chick"                   => "🐥",
-  "hatching_chick"                  => "🐣",
-  "chicken"                         => "🐔",
-  "penguin"                         => "🐧",
-  "turtle"                          => "🐢",
-  "bug"                             => "🐛",
-  "honeybee"                        => "🐝",
-  "ant"                             => "🐜",
-  "beetle"                          => "🐞",
-  "snail"                           => "🐌",
-  "octopus"                         => "🐙",
-  "tropical_fish"                   => "🐠",
-  "fish"                            => "🐟",
-  "whale"                           => "🐳",
-  "whale2"                          => "🐋",
-  "dolphin"                         => "🐬",
-  "cow2"                            => "🐄",
-  "ram"                             => "🐏",
-  "rat"                             => "🐀",
-  "water_buffalo"                   => "🐃",
-  "tiger2"                          => "🐅",
-  "rabbit2"                         => "🐇",
-  "dragon"                          => "🐉",
-  "goat"                            => "🐐",
-  "rooster"                         => "🐓",
-  "dog2"                            => "🐕",
-  "pig2"                            => "🐖",
-  "mouse2"                          => "🐁",
-  "ox"                              => "🐂",
-  "dragon_face"                     => "🐲",
-  "blowfish"                        => "🐡",
-  "crocodile"                       => "🐊",
-  "dromedary_camel"                 => "🐪",
-  "leopard"                         => "🐆",
-  "cat2"                            => "🐈",
-  "poodle"                          => "🐩",
-  "paw_prints"                      => "🐾",
-  "bouquet"                         => "💐",
-  "cherry_blossom"                  => "🌸",
-  "tulip"                           => "🌷",
-  "four_leaf_clover"                => "🍀",
-  "rose"                            => "🌹",
-  "sunflower"                       => "🌻",
-  "hibiscus"                        => "🌺",
-  "maple_leaf"                      => "🍁",
-  "leaves"                          => "🍃",
-  "fallen_leaf"                     => "🍂",
-  "herb"                            => "🌿",
-  "mushroom"                        => "🍄",
-  "cactus"                          => "🌵",
-  "palm_tree"                       => "🌴",
-  "evergreen_tree"                  => "🌲",
-  "deciduous_tree"                  => "🌳",
-  "chestnut"                        => "🌰",
-  "seedling"                        => "🌱",
-  "blossom"                         => "🌼",
-  "ear_of_rice"                     => "🌾",
-  "shell"                           => "🐚",
-  "globe_with_meridians"            => "🌐",
-  "sun_with_face"                   => "🌞",
-  "full_moon_with_face"             => "🌝",
-  "new_moon_with_face"              => "🌚",
-  "new_moon"                        => "🌑",
-  "waxing_crescent_moon"            => "🌒",
-  "first_quarter_moon"              => "🌓",
-  "waxing_gibbous_moon"             => "🌔",
-  "full_moon"                       => "🌕",
-  "waning_gibbous_moon"             => "🌖",
-  "last_quarter_moon"               => "🌗",
-  "waning_crescent_moon"            => "🌘",
-  "last_quarter_moon_with_face"     => "🌜",
-  "first_quarter_moon_with_face"    => "🌛",
-  "moon"                            => "🌔",
-  "earth_africa"                    => "🌍",
-  "earth_americas"                  => "🌎",
-  "earth_asia"                      => "🌏",
-  "volcano"                         => "🌋",
-  "milky_way"                       => "🌌",
-  "partly_sunny"                    => "⛅️",
-  "bamboo"                          => "🎍",
-  "gift_heart"                      => "💝",
-  "dolls"                           => "🎎",
-  "school_satchel"                  => "🎒",
-  "mortar_board"                    => "🎓",
-  "flags"                           => "🎏",
-  "fireworks"                       => "🎆",
-  "sparkler"                        => "🎇",
-  "wind_chime"                      => "🎐",
-  "rice_scene"                      => "🎑",
-  "jack_o_lantern"                  => "🎃",
-  "ghost"                           => "👻",
-  "santa"                           => "🎅",
-  "christmas_tree"                  => "🎄",
-  "gift"                            => "🎁",
-  "bell"                            => "🔔",
-  "no_bell"                         => "🔕",
-  "tanabata_tree"                   => "🎋",
-  "tada"                            => "🎉",
-  "confetti_ball"                   => "🎊",
-  "balloon"                         => "🎈",
-  "crystal_ball"                    => "🔮",
-  "cd"                              => "💿",
-  "dvd"                             => "📀",
-  "floppy_disk"                     => "💾",
-  "camera"                          => "📷",
-  "video_camera"                    => "📹",
-  "movie_camera"                    => "🎥",
-  "computer"                        => "💻",
-  "tv"                              => "📺",
-  "iphone"                          => "📱",
-  "phone"                           => "☎️",
-  "telephone"                       => "☎️",
-  "telephone_receiver"              => "📞",
-  "pager"                           => "📟",
-  "fax"                             => "📠",
-  "minidisc"                        => "💽",
-  "vhs"                             => "📼",
-  "sound"                           => "🔉",
-  "speaker"                         => "🔈",
-  "mute"                            => "🔇",
-  "loudspeaker"                     => "📢",
-  "mega"                            => "📣",
-  "hourglass"                       => "⌛️",
-  "hourglass_flowing_sand"          => "⏳",
-  "alarm_clock"                     => "⏰",
-  "watch"                           => "⌚️",
-  "radio"                           => "📻",
-  "satellite"                       => "📡",
-  "loop"                            => "➿",
-  "mag"                             => "🔍",
-  "mag_right"                       => "🔎",
-  "unlock"                          => "🔓",
-  "lock"                            => "🔒",
-  "lock_with_ink_pen"               => "🔏",
-  "closed_lock_with_key"            => "🔐",
-  "key"                             => "🔑",
-  "bulb"                            => "💡",
-  "flashlight"                      => "🔦",
-  "high_brightness"                 => "🔆",
-  "low_brightness"                  => "🔅",
-  "electric_plug"                   => "🔌",
-  "battery"                         => "🔋",
-  "calling"                         => "📲",
-  "email"                           => "✉️",
-  "mailbox"                         => "📫",
-  "postbox"                         => "📮",
-  "bath"                            => "🛀",
-  "bathtub"                         => "🛁",
-  "shower"                          => "🚿",
-  "toilet"                          => "🚽",
-  "wrench"                          => "🔧",
-  "nut_and_bolt"                    => "🔩",
-  "hammer"                          => "🔨",
-  "seat"                            => "💺",
-  "moneybag"                        => "💰",
-  "yen"                             => "💴",
-  "dollar"                          => "💵",
-  "pound"                           => "💷",
-  "euro"                            => "💶",
-  "credit_card"                     => "💳",
-  "money_with_wings"                => "💸",
-  "e"                               => "📧",
-  "inbox_tray"                      => "📥",
-  "outbox_tray"                     => "📤",
-  "envelope"                        => "✉️",
-  "incoming_envelope"               => "📨",
-  "postal_horn"                     => "📯",
-  "mailbox_closed"                  => "📪",
-  "mailbox_with_mail"               => "📬",
-  "mailbox_with_no_mail"            => "📭",
-  "door"                            => "🚪",
-  "smoking"                         => "🚬",
-  "bomb"                            => "💣",
-  "gun"                             => "🔫",
-  "hocho"                           => "🔪",
-  "pill"                            => "💊",
-  "syringe"                         => "💉",
-  "page_facing_up"                  => "📄",
-  "page_with_curl"                  => "📃",
-  "bookmark_tabs"                   => "📑",
-  "bar_chart"                       => "📊",
-  "chart_with_upwards_trend"        => "📈",
-  "chart_with_downwards_trend"      => "📉",
-  "scroll"                          => "📜",
-  "clipboard"                       => "📋",
-  "calendar"                        => "📆",
-  "date"                            => "📅",
-  "card_index"                      => "📇",
-  "file_folder"                     => "📁",
-  "open_file_folder"                => "📂",
-  "scissors"                        => "✂️",
-  "pushpin"                         => "📌",
-  "paperclip"                       => "📎",
-  "black_nib"                       => "✒️",
-  "pencil2"                         => "✏️",
-  "straight_ruler"                  => "📏",
-  "triangular_ruler"                => "📐",
-  "closed_book"                     => "📕",
-  "green_book"                      => "📗",
-  "blue_book"                       => "📘",
-  "orange_book"                     => "📙",
-  "notebook"                        => "📓",
-  "notebook_with_decorative_cover"  => "📔",
-  "ledger"                          => "📒",
-  "books"                           => "📚",
-  "bookmark"                        => "🔖",
-  "name_badge"                      => "📛",
-  "microscope"                      => "🔬",
-  "telescope"                       => "🔭",
-  "newspaper"                       => "📰",
-  "football"                        => "🏈",
-  "basketball"                      => "🏀",
-  "soccer"                          => "⚽️",
-  "baseball"                        => "⚾️",
-  "tennis"                          => "🎾",
-  "8ball"                           => "🎱",
-  "rugby_football"                  => "🏉",
-  "bowling"                         => "🎳",
-  "golf"                            => "⛳️",
-  "mountain_bicyclist"              => "🚵",
-  "bicyclist"                       => "🚴",
-  "horse_racing"                    => "🏇",
-  "snowboarder"                     => "🏂",
-  "swimmer"                         => "🏊",
-  "surfer"                          => "🏄",
-  "ski"                             => "🎿",
-  "spades"                          => "♠️",
-  "hearts"                          => "♥️",
-  "clubs"                           => "♣️",
-  "diamonds"                        => "♦️",
-  "gem"                             => "💎",
-  "ring"                            => "💍",
-  "trophy"                          => "🏆",
-  "musical_score"                   => "🎼",
-  "musical_keyboard"                => "🎹",
-  "violin"                          => "🎻",
-  "space_invader"                   => "👾",
-  "video_game"                      => "🎮",
-  "black_joker"                     => "🃏",
-  "flower_playing_cards"            => "🎴",
-  "game_die"                        => "🎲",
-  "dart"                            => "🎯",
-  "mahjong"                         => "🀄️",
-  "clapper"                         => "🎬",
-  "memo"                            => "📝",
-  "pencil"                          => "📝",
-  "book"                            => "📖",
-  "art"                             => "🎨",
-  "microphone"                      => "🎤",
-  "headphones"                      => "🎧",
-  "trumpet"                         => "🎺",
-  "saxophone"                       => "🎷",
-  "guitar"                          => "🎸",
-  "shoe"                            => "👞",
-  "sandal"                          => "👡",
-  "high_heel"                       => "👠",
-  "lipstick"                        => "💄",
-  "boot"                            => "👢",
-  "shirt"                           => "👕",
-  "tshirt"                          => "👕",
-  "necktie"                         => "👔",
-  "womans_clothes"                  => "👚",
-  "dress"                           => "👗",
-  "running_shirt_with_sash"         => "🎽",
-  "jeans"                           => "👖",
-  "kimono"                          => "👘",
-  "bikini"                          => "👙",
-  "ribbon"                          => "🎀",
-  "tophat"                          => "🎩",
-  "crown"                           => "👑",
-  "womans_hat"                      => "👒",
-  "mans_shoe"                       => "👞",
-  "closed_umbrella"                 => "🌂",
-  "briefcase"                       => "💼",
-  "handbag"                         => "👜",
-  "pouch"                           => "👝",
-  "purse"                           => "👛",
-  "eyeglasses"                      => "👓",
-  "fishing_pole_and_fish"           => "🎣",
-  "coffee"                          => "☕️",
-  "tea"                             => "🍵",
-  "sake"                            => "🍶",
-  "baby_bottle"                     => "🍼",
-  "beer"                            => "🍺",
-  "beers"                           => "🍻",
-  "cocktail"                        => "🍸",
-  "tropical_drink"                  => "🍹",
-  "wine_glass"                      => "🍷",
-  "fork_and_knife"                  => "🍴",
-  "pizza"                           => "🍕",
-  "hamburger"                       => "🍔",
-  "fries"                           => "🍟",
-  "poultry_leg"                     => "🍗",
-  "meat_on_bone"                    => "🍖",
-  "spaghetti"                       => "🍝",
-  "curry"                           => "🍛",
-  "fried_shrimp"                    => "🍤",
-  "bento"                           => "🍱",
-  "sushi"                           => "🍣",
-  "fish_cake"                       => "🍥",
-  "rice_ball"                       => "🍙",
-  "rice_cracker"                    => "🍘",
-  "rice"                            => "🍚",
-  "ramen"                           => "🍜",
-  "stew"                            => "🍲",
-  "oden"                            => "🍢",
-  "dango"                           => "🍡",
-  "egg"                             => "🥚",
-  "bread"                           => "🍞",
-  "doughnut"                        => "🍩",
-  "custard"                         => "🍮",
-  "icecream"                        => "🍦",
-  "ice_cream"                       => "🍨",
-  "shaved_ice"                      => "🍧",
-  "birthday"                        => "🎂",
-  "cake"                            => "🍰",
-  "cookie"                          => "🍪",
-  "chocolate_bar"                   => "🍫",
-  "candy"                           => "🍬",
-  "lollipop"                        => "🍭",
-  "honey_pot"                       => "🍯",
-  "apple"                           => "🍎",
-  "green_apple"                     => "🍏",
-  "tangerine"                       => "🍊",
-  "lemon"                           => "🍋",
-  "cherries"                        => "🍒",
-  "grapes"                          => "🍇",
-  "watermelon"                      => "🍉",
-  "strawberry"                      => "🍓",
-  "peach"                           => "🍑",
-  "melon"                           => "🍈",
-  "banana"                          => "🍌",
-  "pear"                            => "🍐",
-  "pineapple"                       => "🍍",
-  "sweet_potato"                    => "🍠",
-  "eggplant"                        => "🍆",
-  "tomato"                          => "🍅",
-  "corn"                            => "🌽",
-  "house"                           => "🏠",
-  "house_with_garden"               => "🏡",
-  "school"                          => "🏫",
-  "office"                          => "🏢",
-  "post_office"                     => "🏣",
-  "hospital"                        => "🏥",
-  "bank"                            => "🏦",
-  "convenience_store"               => "🏪",
-  "love_hotel"                      => "🏩",
-  "hotel"                           => "🏨",
-  "wedding"                         => "💒",
-  "church"                          => "⛪️",
-  "department_store"                => "🏬",
-  "european_post_office"            => "🏤",
-  "city_sunrise"                    => "🌇",
-  "city_sunset"                     => "🌆",
-  "japanese_castle"                 => "🏯",
-  "european_castle"                 => "🏰",
-  "tent"                            => "⛺️",
-  "factory"                         => "🏭",
-  "tokyo_tower"                     => "🗼",
-  "japan"                           => "🗾",
-  "mount_fuji"                      => "🗻",
-  "sunrise_over_mountains"          => "🌄",
-  "sunrise"                         => "🌅",
-  "stars"                           => "🌠",
-  "statue_of_liberty"               => "🗽",
-  "bridge_at_night"                 => "🌉",
-  "carousel_horse"                  => "🎠",
-  "rainbow"                         => "🌈",
-  "ferris_wheel"                    => "🎡",
-  "fountain"                        => "⛲️",
-  "roller_coaster"                  => "🎢",
-  "ship"                            => "🚢",
-  "speedboat"                       => "🚤",
-  "boat"                            => "⛵️",
-  "sailboat"                        => "⛵️",
-  "rowboat"                         => "🚣",
-  "anchor"                          => "⚓️",
-  "rocket"                          => "🚀",
-  "airplane"                        => "✈️",
-  "helicopter"                      => "🚁",
-  "steam_locomotive"                => "🚂",
-  "tram"                            => "🚊",
-  "mountain_railway"                => "🚞",
-  "bike"                            => "🚲",
-  "aerial_tramway"                  => "🚡",
-  "suspension_railway"              => "🚟",
-  "mountain_cableway"               => "🚠",
-  "tractor"                         => "🚜",
-  "blue_car"                        => "🚙",
-  "oncoming_automobile"             => "🚘",
-  "car"                             => "🚗",
-  "red_car"                         => "🚗",
-  "taxi"                            => "🚕",
-  "oncoming_taxi"                   => "🚖",
-  "articulated_lorry"               => "🚛",
-  "bus"                             => "🚌",
-  "oncoming_bus"                    => "🚍",
-  "rotating_light"                  => "🚨",
-  "police_car"                      => "🚓",
-  "oncoming_police_car"             => "🚔",
-  "fire_engine"                     => "🚒",
-  "ambulance"                       => "🚑",
-  "minibus"                         => "🚐",
-  "truck"                           => "🚚",
-  "train"                           => "🚋",
-  "station"                         => "🚉",
-  "train2"                          => "🚆",
-  "bullettrain_front"               => "🚅",
-  "bullettrain_side"                => "🚄",
-  "light_rail"                      => "🚈",
-  "monorail"                        => "🚝",
-  "railway_car"                     => "🚃",
-  "trolleybus"                      => "🚎",
-  "ticket"                          => "🎫",
-  "fuelpump"                        => "⛽️",
-  "vertical_traffic_light"          => "🚦",
-  "traffic_light"                   => "🚥",
-  "warning"                         => "⚠️",
-  "construction"                    => "🚧",
-  "beginner"                        => "🔰",
-  "atm"                             => "🏧",
-  "slot_machine"                    => "🎰",
-  "busstop"                         => "🚏",
-  "barber"                          => "💈",
-  "hotsprings"                      => "♨️",
-  "checkered_flag"                  => "🏁",
-  "crossed_flags"                   => "🎌",
-  "izakaya_lantern"                 => "🏮",
-  "moyai"                           => "🗿",
-  "circus_tent"                     => "🎪",
-  "performing_arts"                 => "🎭",
-  "round_pushpin"                   => "📍",
-  "triangular_flag_on_post"         => "🚩",
-  "jp"                              => "🇯🇵",
-  "kr"                              => "🇰🇷",
-  "cn"                              => "🇨🇳",
-  "us"                              => "🇺🇸",
-  "fr"                              => "🇫🇷",
-  "es"                              => "🇪🇸",
-  "it"                              => "🇮🇹",
-  "ru"                              => "🇷🇺",
-  "gb"                              => "🇬🇧",
-  "uk"                              => "🇬🇧",
-  "de"                              => "🇩🇪",
-  "one"                             => "1️⃣",
-  "two"                             => "2️⃣",
-  "three"                           => "3️⃣",
-  "four"                            => "4️⃣",
-  "five"                            => "5️⃣",
-  "six"                             => "6️⃣",
-  "seven"                           => "7️⃣",
-  "eight"                           => "8️⃣",
-  "nine"                            => "9️⃣",
-  "keycap_ten"                      => "🔟",
-  "1234"                            => "🔢",
-  "zero"                            => "0️⃣",
-  "hash"                            => "#️⃣",
-  "symbols"                         => "🔣",
-  "arrow_backward"                  => "◀️",
-  "arrow_down"                      => "⬇️",
-  "arrow_forward"                   => "▶️",
-  "arrow_left"                      => "⬅️",
-  "capital_abcd"                    => "🔠",
-  "abcd"                            => "🔡",
-  "abc"                             => "🔤",
-  "arrow_lower_left"                => "↙️",
-  "arrow_lower_right"               => "↘️",
-  "arrow_right"                     => "➡️",
-  "arrow_up"                        => "⬆️",
-  "arrow_upper_left"                => "↖️",
-  "arrow_upper_right"               => "↗️",
-  "arrow_double_down"               => "⏬",
-  "arrow_double_up"                 => "⏫",
-  "arrow_down_small"                => "🔽",
-  "arrow_heading_down"              => "⤵️",
-  "arrow_heading_up"                => "⤴️",
-  "leftwards_arrow_with_hook"       => "↩️",
-  "arrow_right_hook"                => "↪️",
-  "left_right_arrow"                => "↔️",
-  "arrow_up_down"                   => "↕️",
-  "arrow_up_small"                  => "🔼",
-  "arrows_clockwise"                => "🔃",
-  "arrows_counterclockwise"         => "🔄",
-  "rewind"                          => "⏪",
-  "fast_forward"                    => "⏩",
-  "information_source"              => "ℹ️",
-  "ok"                              => "🆗",
-  "twisted_rightwards_arrows"       => "🔀",
-  "repeat"                          => "🔁",
-  "repeat_one"                      => "🔂",
-  "new"                             => "🆕",
-  "top"                             => "🔝",
-  "up"                              => "🆙",
-  "cool"                            => "🆒",
-  "free"                            => "🆓",
-  "ng"                              => "🆖",
-  "cinema"                          => "🎦",
-  "koko"                            => "🈁",
-  "signal_strength"                 => "📶",
-  "u5272"                           => "🈹",
-  "u5408"                           => "🈴",
-  "u55b6"                           => "🈺",
-  "u6307"                           => "🈯️",
-  "u6708"                           => "🈷️",
-  "u6709"                           => "🈶",
-  "u6e80"                           => "🈵",
-  "u7121"                           => "🈚️",
-  "u7533"                           => "🈸",
-  "u7a7a"                           => "🈳",
-  "u7981"                           => "🈲",
-  "sa"                              => "🈂️",
-  "restroom"                        => "🚻",
-  "mens"                            => "🚹",
-  "womens"                          => "🚺",
-  "baby_symbol"                     => "🚼",
-  "no_smoking"                      => "🚭",
-  "parking"                         => "🅿️",
-  "wheelchair"                      => "♿️",
-  "metro"                           => "🚇",
-  "baggage_claim"                   => "🛄",
-  "accept"                          => "🉑",
-  "wc"                              => "🚾",
-  "potable_water"                   => "🚰",
-  "put_litter_in_its_place"         => "🚮",
-  "secret"                          => "㊙️",
-  "congratulations"                 => "㊗️",
-  "m"                               => "Ⓜ️",
-  "passport_control"                => "🛂",
-  "left_luggage"                    => "🛅",
-  "customs"                         => "🛃",
-  "ideograph_advantage"             => "🉐",
-  "cl"                              => "🆑",
-  "sos"                             => "🆘",
-  "id"                              => "🆔",
-  "no_entry_sign"                   => "🚫",
-  "underage"                        => "🔞",
-  "no_mobile_phones"                => "📵",
-  "do_not_litter"                   => "🚯",
-  "non"                             => "🚱",
-  "no_bicycles"                     => "🚳",
-  "no_pedestrians"                  => "🚷",
-  "children_crossing"               => "🚸",
-  "no_entry"                        => "⛔️",
-  "eight_spoked_asterisk"           => "✳️",
-  "eight_pointed_black_star"        => "✴️",
-  "heart_decoration"                => "💟",
-  "vs"                              => "🆚",
-  "vibration_mode"                  => "📳",
-  "mobile_phone_off"                => "📴",
-  "chart"                           => "💹",
-  "currency_exchange"               => "💱",
-  "aries"                           => "♈️",
-  "taurus"                          => "♉️",
-  "gemini"                          => "♊️",
-  "cancer"                          => "♋️",
-  "leo"                             => "♌️",
-  "virgo"                           => "♍️",
-  "libra"                           => "♎️",
-  "scorpius"                        => "♏️",
-  "sagittarius"                     => "♐️",
-  "capricorn"                       => "♑️",
-  "aquarius"                        => "♒️",
-  "pisces"                          => "♓️",
-  "ophiuchus"                       => "⛎",
-  "six_pointed_star"                => "🔯",
-  "negative_squared_cross_mark"     => "❎",
-  "a"                               => "🅰️",
-  "b"                               => "🅱️",
-  "ab"                              => "🆎",
-  "o2"                              => "🅾️",
-  "diamond_shape_with_a_dot_inside" => "💠",
-  "recycle"                         => "♻️",
-  "end"                             => "🔚",
-  "on"                              => "🔛",
-  "soon"                            => "🔜",
-  "clock1"                          => "🕐",
-  "clock130"                        => "🕜",
-  "clock10"                         => "🕙",
-  "clock1030"                       => "🕥",
-  "clock11"                         => "🕚",
-  "clock1130"                       => "🕦",
-  "clock12"                         => "🕛",
-  "clock1230"                       => "🕧",
-  "clock2"                          => "🕑",
-  "clock230"                        => "🕝",
-  "clock3"                          => "🕒",
-  "clock330"                        => "🕞",
-  "clock4"                          => "🕓",
-  "clock430"                        => "🕟",
-  "clock5"                          => "🕔",
-  "clock530"                        => "🕠",
-  "clock6"                          => "🕕",
-  "clock630"                        => "🕡",
-  "clock7"                          => "🕖",
-  "clock730"                        => "🕢",
-  "clock8"                          => "🕗",
-  "clock830"                        => "🕣",
-  "clock9"                          => "🕘",
-  "clock930"                        => "🕤",
-  "heavy_dollar_sign"               => "💲",
-  "copyright"                       => "©️",
-  "registered"                      => "®️",
-  "tm"                              => "™️",
-  "x"                               => "❌",
-  "heavy_exclamation_mark"          => "❗️",
-  "bangbang"                        => "‼️",
-  "interrobang"                     => "⁉️",
-  "o"                               => "⭕️",
-  "heavy_multiplication_x"          => "✖️",
-  "heavy_plus_sign"                 => "➕",
-  "heavy_minus_sign"                => "➖",
-  "heavy_division_sign"             => "➗",
-  "white_flower"                    => "💮",
-  "100"                             => "💯",
-  "heavy_check_mark"                => "✔️",
-  "ballot_box_with_check"           => "☑️",
-  "radio_button"                    => "🔘",
-  "link"                            => "🔗",
-  "curly_loop"                      => "➰",
-  "wavy_dash"                       => "〰️",
-  "part_alternation_mark"           => "〽️",
-  "trident"                         => "🔱",
-  "white_check_mark"                => "✅",
-  "black_square_button"             => "🔲",
-  "white_square_button"             => "🔳",
-  "black_circle"                    => "⚫️",
-  "white_circle"                    => "⚪️",
-  "red_circle"                      => "🔴",
-  "large_blue_circle"               => "🔵",
-  "large_blue_diamond"              => "🔷",
-  "large_orange_diamond"            => "🔶",
-  "small_blue_diamond"              => "🔹",
-  "small_orange_diamond"            => "🔸",
-  "small_red_triangle"              => "🔺",
-  "small_red_triangle_down"         => "🔻",
-}
+def emoji(name : String)
+  case name
+  when "smile"                           then "😄"
+  when "laughing"                        then "😆"
+  when "blush"                           then "😊"
+  when "smiley"                          then "😃"
+  when "relaxed"                         then "☺️"
+  when "smirk"                           then "😏"
+  when "heart_eyes"                      then "😍"
+  when "kissing_heart"                   then "😘"
+  when "kissing_closed_eyes"             then "😚"
+  when "flushed"                         then "😳"
+  when "relieved"                        then "😌"
+  when "satisfied"                       then "😆"
+  when "grin"                            then "😁"
+  when "wink"                            then "😉"
+  when "stuck_out_tongue_winking_eye"    then "😜"
+  when "stuck_out_tongue_closed_eyes"    then "😝"
+  when "grinning"                        then "😀"
+  when "kissing"                         then "😗"
+  when "kissing_smiling_eyes"            then "😙"
+  when "stuck_out_tongue"                then "😛"
+  when "sleeping"                        then "😴"
+  when "worried"                         then "😟"
+  when "frowning"                        then "😦"
+  when "anguished"                       then "😧"
+  when "open_mouth"                      then "😮"
+  when "grimacing"                       then "😬"
+  when "confused"                        then "😕"
+  when "hushed"                          then "😯"
+  when "expressionless"                  then "😑"
+  when "unamused"                        then "😒"
+  when "sweat_smile"                     then "😅"
+  when "sweat"                           then "😓"
+  when "disappointed_relieved"           then "😥"
+  when "weary"                           then "😩"
+  when "pensive"                         then "😔"
+  when "disappointed"                    then "😞"
+  when "confounded"                      then "😖"
+  when "fearful"                         then "😨"
+  when "cold_sweat"                      then "😰"
+  when "persevere"                       then "😣"
+  when "cry"                             then "😢"
+  when "sob"                             then "😭"
+  when "joy"                             then "😂"
+  when "astonished"                      then "😲"
+  when "scream"                          then "😱"
+  when "tired_face"                      then "😫"
+  when "angry"                           then "😠"
+  when "rage"                            then "😡"
+  when "triumph"                         then "😤"
+  when "sleepy"                          then "😪"
+  when "yum"                             then "😋"
+  when "mask"                            then "😷"
+  when "sunglasses"                      then "😎"
+  when "dizzy_face"                      then "😵"
+  when "imp"                             then "👿"
+  when "smiling_imp"                     then "😈"
+  when "neutral_face"                    then "😐"
+  when "no_mouth"                        then "😶"
+  when "innocent"                        then "😇"
+  when "alien"                           then "👽"
+  when "yellow_heart"                    then "💛"
+  when "blue_heart"                      then "💙"
+  when "purple_heart"                    then "💜"
+  when "heart"                           then "❤️"
+  when "green_heart"                     then "💚"
+  when "broken_heart"                    then "💔"
+  when "heartbeat"                       then "💓"
+  when "heartpulse"                      then "💗"
+  when "two_hearts"                      then "💕"
+  when "revolving_hearts"                then "💞"
+  when "cupid"                           then "💘"
+  when "sparkling_heart"                 then "💖"
+  when "sparkles"                        then "✨"
+  when "star"                            then "⭐️"
+  when "star2"                           then "🌟"
+  when "dizzy"                           then "💫"
+  when "boom"                            then "💥"
+  when "collision"                       then "💥"
+  when "anger"                           then "💢"
+  when "exclamation"                     then "❗️"
+  when "question"                        then "❓"
+  when "grey_exclamation"                then "❕"
+  when "grey_question"                   then "❔"
+  when "zzz"                             then "💤"
+  when "dash"                            then "💨"
+  when "sweat_drops"                     then "💦"
+  when "notes"                           then "🎶"
+  when "musical_note"                    then "🎵"
+  when "fire"                            then "🔥"
+  when "hankey"                          then "💩"
+  when "poop"                            then "💩"
+  when "shit"                            then "💩"
+  when "+1"                              then "👍"
+  when "thumbsup"                        then "👍"
+  when "-1"                              then "👎"
+  when "thumbsdown"                      then "👎"
+  when "ok_hand"                         then "👌"
+  when "punch"                           then "👊"
+  when "facepunch"                       then "👊"
+  when "fist"                            then "✊"
+  when "v"                               then "✌️"
+  when "wave"                            then "👋"
+  when "hand"                            then "✋"
+  when "raised_hand"                     then "✋"
+  when "open_hands"                      then "👐"
+  when "point_up"                        then "☝️"
+  when "point_down"                      then "👇"
+  when "point_left"                      then "👈"
+  when "point_right"                     then "👉"
+  when "raised_hands"                    then "🙌"
+  when "pray"                            then "🙏"
+  when "point_up_2"                      then "👆"
+  when "clap"                            then "👏"
+  when "muscle"                          then "💪"
+  when "metal"                           then "🤘"
+  when "fu"                              then "🖕"
+  when "walking"                         then "🚶"
+  when "runner"                          then "🏃"
+  when "running"                         then "🏃"
+  when "couple"                          then "👫"
+  when "family"                          then "👪"
+  when "two_men_holding_hands"           then "👬"
+  when "two_women_holding_hands"         then "👭"
+  when "dancer"                          then "💃"
+  when "dancers"                         then "👯"
+  when "ok_woman"                        then "🙆"
+  when "no_good"                         then "🙅"
+  when "information_desk_person"         then "💁"
+  when "raising_hand"                    then "🙋"
+  when "bride_with_veil"                 then "👰"
+  when "person_with_pouting_face"        then "🙎"
+  when "person_frowning"                 then "🙍"
+  when "bow"                             then "🙇"
+  when "couple_with_heart"               then "💑"
+  when "massage"                         then "💆"
+  when "haircut"                         then "💇"
+  when "nail_care"                       then "💅"
+  when "boy"                             then "👦"
+  when "girl"                            then "👧"
+  when "woman"                           then "👩"
+  when "man"                             then "👨"
+  when "baby"                            then "👶"
+  when "older_woman"                     then "👵"
+  when "older_man"                       then "👴"
+  when "person_with_blond_hair"          then "👱"
+  when "man_with_gua_pi_mao"             then "👲"
+  when "man_with_turban"                 then "👳"
+  when "construction_worker"             then "👷"
+  when "cop"                             then "👮"
+  when "angel"                           then "👼"
+  when "princess"                        then "👸"
+  when "smiley_cat"                      then "😺"
+  when "smile_cat"                       then "😸"
+  when "heart_eyes_cat"                  then "😻"
+  when "kissing_cat"                     then "😽"
+  when "smirk_cat"                       then "😼"
+  when "scream_cat"                      then "🙀"
+  when "crying_cat_face"                 then "😿"
+  when "joy_cat"                         then "😹"
+  when "pouting_cat"                     then "😾"
+  when "japanese_ogre"                   then "👹"
+  when "japanese_goblin"                 then "👺"
+  when "see_no_evil"                     then "🙈"
+  when "hear_no_evil"                    then "🙉"
+  when "speak_no_evil"                   then "🙊"
+  when "guardsman"                       then "💂"
+  when "skull"                           then "💀"
+  when "feet"                            then "🐾"
+  when "lips"                            then "👄"
+  when "kiss"                            then "💋"
+  when "droplet"                         then "💧"
+  when "ear"                             then "👂"
+  when "eyes"                            then "👀"
+  when "nose"                            then "👃"
+  when "tongue"                          then "👅"
+  when "love_letter"                     then "💌"
+  when "bust_in_silhouette"              then "👤"
+  when "busts_in_silhouette"             then "👥"
+  when "speech_balloon"                  then "💬"
+  when "thought_balloon"                 then "💭"
+  when "sunny"                           then "☀️"
+  when "umbrella"                        then "☔️"
+  when "cloud"                           then "☁️"
+  when "snowflake"                       then "❄️"
+  when "snowman"                         then "⛄️"
+  when "zap"                             then "⚡️"
+  when "cyclone"                         then "🌀"
+  when "foggy"                           then "🌁"
+  when "ocean"                           then "🌊"
+  when "cat"                             then "🐱"
+  when "dog"                             then "🐶"
+  when "mouse"                           then "🐭"
+  when "hamster"                         then "🐹"
+  when "rabbit"                          then "🐰"
+  when "wolf"                            then "🐺"
+  when "frog"                            then "🐸"
+  when "tiger"                           then "🐯"
+  when "koala"                           then "🐨"
+  when "bear"                            then "🐻"
+  when "pig"                             then "🐷"
+  when "pig_nose"                        then "🐽"
+  when "cow"                             then "🐮"
+  when "boar"                            then "🐗"
+  when "monkey_face"                     then "🐵"
+  when "monkey"                          then "🐒"
+  when "horse"                           then "🐴"
+  when "racehorse"                       then "🐎"
+  when "camel"                           then "🐫"
+  when "sheep"                           then "🐑"
+  when "elephant"                        then "🐘"
+  when "panda_face"                      then "🐼"
+  when "snake"                           then "🐍"
+  when "bird"                            then "🐦"
+  when "baby_chick"                      then "🐤"
+  when "hatched_chick"                   then "🐥"
+  when "hatching_chick"                  then "🐣"
+  when "chicken"                         then "🐔"
+  when "penguin"                         then "🐧"
+  when "turtle"                          then "🐢"
+  when "bug"                             then "🐛"
+  when "honeybee"                        then "🐝"
+  when "ant"                             then "🐜"
+  when "beetle"                          then "🐞"
+  when "snail"                           then "🐌"
+  when "octopus"                         then "🐙"
+  when "tropical_fish"                   then "🐠"
+  when "fish"                            then "🐟"
+  when "whale"                           then "🐳"
+  when "whale2"                          then "🐋"
+  when "dolphin"                         then "🐬"
+  when "cow2"                            then "🐄"
+  when "ram"                             then "🐏"
+  when "rat"                             then "🐀"
+  when "water_buffalo"                   then "🐃"
+  when "tiger2"                          then "🐅"
+  when "rabbit2"                         then "🐇"
+  when "dragon"                          then "🐉"
+  when "goat"                            then "🐐"
+  when "rooster"                         then "🐓"
+  when "dog2"                            then "🐕"
+  when "pig2"                            then "🐖"
+  when "mouse2"                          then "🐁"
+  when "ox"                              then "🐂"
+  when "dragon_face"                     then "🐲"
+  when "blowfish"                        then "🐡"
+  when "crocodile"                       then "🐊"
+  when "dromedary_camel"                 then "🐪"
+  when "leopard"                         then "🐆"
+  when "cat2"                            then "🐈"
+  when "poodle"                          then "🐩"
+  when "paw_prints"                      then "🐾"
+  when "bouquet"                         then "💐"
+  when "cherry_blossom"                  then "🌸"
+  when "tulip"                           then "🌷"
+  when "four_leaf_clover"                then "🍀"
+  when "rose"                            then "🌹"
+  when "sunflower"                       then "🌻"
+  when "hibiscus"                        then "🌺"
+  when "maple_leaf"                      then "🍁"
+  when "leaves"                          then "🍃"
+  when "fallen_leaf"                     then "🍂"
+  when "herb"                            then "🌿"
+  when "mushroom"                        then "🍄"
+  when "cactus"                          then "🌵"
+  when "palm_tree"                       then "🌴"
+  when "evergreen_tree"                  then "🌲"
+  when "deciduous_tree"                  then "🌳"
+  when "chestnut"                        then "🌰"
+  when "seedling"                        then "🌱"
+  when "blossom"                         then "🌼"
+  when "ear_of_rice"                     then "🌾"
+  when "shell"                           then "🐚"
+  when "globe_with_meridians"            then "🌐"
+  when "sun_with_face"                   then "🌞"
+  when "full_moon_with_face"             then "🌝"
+  when "new_moon_with_face"              then "🌚"
+  when "new_moon"                        then "🌑"
+  when "waxing_crescent_moon"            then "🌒"
+  when "first_quarter_moon"              then "🌓"
+  when "waxing_gibbous_moon"             then "🌔"
+  when "full_moon"                       then "🌕"
+  when "waning_gibbous_moon"             then "🌖"
+  when "last_quarter_moon"               then "🌗"
+  when "waning_crescent_moon"            then "🌘"
+  when "last_quarter_moon_with_face"     then "🌜"
+  when "first_quarter_moon_with_face"    then "🌛"
+  when "moon"                            then "🌔"
+  when "earth_africa"                    then "🌍"
+  when "earth_americas"                  then "🌎"
+  when "earth_asia"                      then "🌏"
+  when "volcano"                         then "🌋"
+  when "milky_way"                       then "🌌"
+  when "partly_sunny"                    then "⛅️"
+  when "bamboo"                          then "🎍"
+  when "gift_heart"                      then "💝"
+  when "dolls"                           then "🎎"
+  when "school_satchel"                  then "🎒"
+  when "mortar_board"                    then "🎓"
+  when "flags"                           then "🎏"
+  when "fireworks"                       then "🎆"
+  when "sparkler"                        then "🎇"
+  when "wind_chime"                      then "🎐"
+  when "rice_scene"                      then "🎑"
+  when "jack_o_lantern"                  then "🎃"
+  when "ghost"                           then "👻"
+  when "santa"                           then "🎅"
+  when "christmas_tree"                  then "🎄"
+  when "gift"                            then "🎁"
+  when "bell"                            then "🔔"
+  when "no_bell"                         then "🔕"
+  when "tanabata_tree"                   then "🎋"
+  when "tada"                            then "🎉"
+  when "confetti_ball"                   then "🎊"
+  when "balloon"                         then "🎈"
+  when "crystal_ball"                    then "🔮"
+  when "cd"                              then "💿"
+  when "dvd"                             then "📀"
+  when "floppy_disk"                     then "💾"
+  when "camera"                          then "📷"
+  when "video_camera"                    then "📹"
+  when "movie_camera"                    then "🎥"
+  when "computer"                        then "💻"
+  when "tv"                              then "📺"
+  when "iphone"                          then "📱"
+  when "phone"                           then "☎️"
+  when "telephone"                       then "☎️"
+  when "telephone_receiver"              then "📞"
+  when "pager"                           then "📟"
+  when "fax"                             then "📠"
+  when "minidisc"                        then "💽"
+  when "vhs"                             then "📼"
+  when "sound"                           then "🔉"
+  when "speaker"                         then "🔈"
+  when "mute"                            then "🔇"
+  when "loudspeaker"                     then "📢"
+  when "mega"                            then "📣"
+  when "hourglass"                       then "⌛️"
+  when "hourglass_flowing_sand"          then "⏳"
+  when "alarm_clock"                     then "⏰"
+  when "watch"                           then "⌚️"
+  when "radio"                           then "📻"
+  when "satellite"                       then "📡"
+  when "loop"                            then "➿"
+  when "mag"                             then "🔍"
+  when "mag_right"                       then "🔎"
+  when "unlock"                          then "🔓"
+  when "lock"                            then "🔒"
+  when "lock_with_ink_pen"               then "🔏"
+  when "closed_lock_with_key"            then "🔐"
+  when "key"                             then "🔑"
+  when "bulb"                            then "💡"
+  when "flashlight"                      then "🔦"
+  when "high_brightness"                 then "🔆"
+  when "low_brightness"                  then "🔅"
+  when "electric_plug"                   then "🔌"
+  when "battery"                         then "🔋"
+  when "calling"                         then "📲"
+  when "email"                           then "✉️"
+  when "mailbox"                         then "📫"
+  when "postbox"                         then "📮"
+  when "bath"                            then "🛀"
+  when "bathtub"                         then "🛁"
+  when "shower"                          then "🚿"
+  when "toilet"                          then "🚽"
+  when "wrench"                          then "🔧"
+  when "nut_and_bolt"                    then "🔩"
+  when "hammer"                          then "🔨"
+  when "seat"                            then "💺"
+  when "moneybag"                        then "💰"
+  when "yen"                             then "💴"
+  when "dollar"                          then "💵"
+  when "pound"                           then "💷"
+  when "euro"                            then "💶"
+  when "credit_card"                     then "💳"
+  when "money_with_wings"                then "💸"
+  when "e"                               then "📧"
+  when "inbox_tray"                      then "📥"
+  when "outbox_tray"                     then "📤"
+  when "envelope"                        then "✉️"
+  when "incoming_envelope"               then "📨"
+  when "postal_horn"                     then "📯"
+  when "mailbox_closed"                  then "📪"
+  when "mailbox_with_mail"               then "📬"
+  when "mailbox_with_no_mail"            then "📭"
+  when "door"                            then "🚪"
+  when "smoking"                         then "🚬"
+  when "bomb"                            then "💣"
+  when "gun"                             then "🔫"
+  when "hocho"                           then "🔪"
+  when "pill"                            then "💊"
+  when "syringe"                         then "💉"
+  when "page_facing_up"                  then "📄"
+  when "page_with_curl"                  then "📃"
+  when "bookmark_tabs"                   then "📑"
+  when "bar_chart"                       then "📊"
+  when "chart_with_upwards_trend"        then "📈"
+  when "chart_with_downwards_trend"      then "📉"
+  when "scroll"                          then "📜"
+  when "clipboard"                       then "📋"
+  when "calendar"                        then "📆"
+  when "date"                            then "📅"
+  when "card_index"                      then "📇"
+  when "file_folder"                     then "📁"
+  when "open_file_folder"                then "📂"
+  when "scissors"                        then "✂️"
+  when "pushpin"                         then "📌"
+  when "paperclip"                       then "📎"
+  when "black_nib"                       then "✒️"
+  when "pencil2"                         then "✏️"
+  when "straight_ruler"                  then "📏"
+  when "triangular_ruler"                then "📐"
+  when "closed_book"                     then "📕"
+  when "green_book"                      then "📗"
+  when "blue_book"                       then "📘"
+  when "orange_book"                     then "📙"
+  when "notebook"                        then "📓"
+  when "notebook_with_decorative_cover"  then "📔"
+  when "ledger"                          then "📒"
+  when "books"                           then "📚"
+  when "bookmark"                        then "🔖"
+  when "name_badge"                      then "📛"
+  when "microscope"                      then "🔬"
+  when "telescope"                       then "🔭"
+  when "newspaper"                       then "📰"
+  when "football"                        then "🏈"
+  when "basketball"                      then "🏀"
+  when "soccer"                          then "⚽️"
+  when "baseball"                        then "⚾️"
+  when "tennis"                          then "🎾"
+  when "8ball"                           then "🎱"
+  when "rugby_football"                  then "🏉"
+  when "bowling"                         then "🎳"
+  when "golf"                            then "⛳️"
+  when "mountain_bicyclist"              then "🚵"
+  when "bicyclist"                       then "🚴"
+  when "horse_racing"                    then "🏇"
+  when "snowboarder"                     then "🏂"
+  when "swimmer"                         then "🏊"
+  when "surfer"                          then "🏄"
+  when "ski"                             then "🎿"
+  when "spades"                          then "♠️"
+  when "hearts"                          then "♥️"
+  when "clubs"                           then "♣️"
+  when "diamonds"                        then "♦️"
+  when "gem"                             then "💎"
+  when "ring"                            then "💍"
+  when "trophy"                          then "🏆"
+  when "musical_score"                   then "🎼"
+  when "musical_keyboard"                then "🎹"
+  when "violin"                          then "🎻"
+  when "space_invader"                   then "👾"
+  when "video_game"                      then "🎮"
+  when "black_joker"                     then "🃏"
+  when "flower_playing_cards"            then "🎴"
+  when "game_die"                        then "🎲"
+  when "dart"                            then "🎯"
+  when "mahjong"                         then "🀄️"
+  when "clapper"                         then "🎬"
+  when "memo"                            then "📝"
+  when "pencil"                          then "📝"
+  when "book"                            then "📖"
+  when "art"                             then "🎨"
+  when "microphone"                      then "🎤"
+  when "headphones"                      then "🎧"
+  when "trumpet"                         then "🎺"
+  when "saxophone"                       then "🎷"
+  when "guitar"                          then "🎸"
+  when "shoe"                            then "👞"
+  when "sandal"                          then "👡"
+  when "high_heel"                       then "👠"
+  when "lipstick"                        then "💄"
+  when "boot"                            then "👢"
+  when "shirt"                           then "👕"
+  when "tshirt"                          then "👕"
+  when "necktie"                         then "👔"
+  when "womans_clothes"                  then "👚"
+  when "dress"                           then "👗"
+  when "running_shirt_with_sash"         then "🎽"
+  when "jeans"                           then "👖"
+  when "kimono"                          then "👘"
+  when "bikini"                          then "👙"
+  when "ribbon"                          then "🎀"
+  when "tophat"                          then "🎩"
+  when "crown"                           then "👑"
+  when "womans_hat"                      then "👒"
+  when "mans_shoe"                       then "👞"
+  when "closed_umbrella"                 then "🌂"
+  when "briefcase"                       then "💼"
+  when "handbag"                         then "👜"
+  when "pouch"                           then "👝"
+  when "purse"                           then "👛"
+  when "eyeglasses"                      then "👓"
+  when "fishing_pole_and_fish"           then "🎣"
+  when "coffee"                          then "☕️"
+  when "tea"                             then "🍵"
+  when "sake"                            then "🍶"
+  when "baby_bottle"                     then "🍼"
+  when "beer"                            then "🍺"
+  when "beers"                           then "🍻"
+  when "cocktail"                        then "🍸"
+  when "tropical_drink"                  then "🍹"
+  when "wine_glass"                      then "🍷"
+  when "fork_and_knife"                  then "🍴"
+  when "pizza"                           then "🍕"
+  when "hamburger"                       then "🍔"
+  when "fries"                           then "🍟"
+  when "poultry_leg"                     then "🍗"
+  when "meat_on_bone"                    then "🍖"
+  when "spaghetti"                       then "🍝"
+  when "curry"                           then "🍛"
+  when "fried_shrimp"                    then "🍤"
+  when "bento"                           then "🍱"
+  when "sushi"                           then "🍣"
+  when "fish_cake"                       then "🍥"
+  when "rice_ball"                       then "🍙"
+  when "rice_cracker"                    then "🍘"
+  when "rice"                            then "🍚"
+  when "ramen"                           then "🍜"
+  when "stew"                            then "🍲"
+  when "oden"                            then "🍢"
+  when "dango"                           then "🍡"
+  when "egg"                             then "🥚"
+  when "bread"                           then "🍞"
+  when "doughnut"                        then "🍩"
+  when "custard"                         then "🍮"
+  when "icecream"                        then "🍦"
+  when "ice_cream"                       then "🍨"
+  when "shaved_ice"                      then "🍧"
+  when "birthday"                        then "🎂"
+  when "cake"                            then "🍰"
+  when "cookie"                          then "🍪"
+  when "chocolate_bar"                   then "🍫"
+  when "candy"                           then "🍬"
+  when "lollipop"                        then "🍭"
+  when "honey_pot"                       then "🍯"
+  when "apple"                           then "🍎"
+  when "green_apple"                     then "🍏"
+  when "tangerine"                       then "🍊"
+  when "lemon"                           then "🍋"
+  when "cherries"                        then "🍒"
+  when "grapes"                          then "🍇"
+  when "watermelon"                      then "🍉"
+  when "strawberry"                      then "🍓"
+  when "peach"                           then "🍑"
+  when "melon"                           then "🍈"
+  when "banana"                          then "🍌"
+  when "pear"                            then "🍐"
+  when "pineapple"                       then "🍍"
+  when "sweet_potato"                    then "🍠"
+  when "eggplant"                        then "🍆"
+  when "tomato"                          then "🍅"
+  when "corn"                            then "🌽"
+  when "house"                           then "🏠"
+  when "house_with_garden"               then "🏡"
+  when "school"                          then "🏫"
+  when "office"                          then "🏢"
+  when "post_office"                     then "🏣"
+  when "hospital"                        then "🏥"
+  when "bank"                            then "🏦"
+  when "convenience_store"               then "🏪"
+  when "love_hotel"                      then "🏩"
+  when "hotel"                           then "🏨"
+  when "wedding"                         then "💒"
+  when "church"                          then "⛪️"
+  when "department_store"                then "🏬"
+  when "european_post_office"            then "🏤"
+  when "city_sunrise"                    then "🌇"
+  when "city_sunset"                     then "🌆"
+  when "japanese_castle"                 then "🏯"
+  when "european_castle"                 then "🏰"
+  when "tent"                            then "⛺️"
+  when "factory"                         then "🏭"
+  when "tokyo_tower"                     then "🗼"
+  when "japan"                           then "🗾"
+  when "mount_fuji"                      then "🗻"
+  when "sunrise_over_mountains"          then "🌄"
+  when "sunrise"                         then "🌅"
+  when "stars"                           then "🌠"
+  when "statue_of_liberty"               then "🗽"
+  when "bridge_at_night"                 then "🌉"
+  when "carousel_horse"                  then "🎠"
+  when "rainbow"                         then "🌈"
+  when "ferris_wheel"                    then "🎡"
+  when "fountain"                        then "⛲️"
+  when "roller_coaster"                  then "🎢"
+  when "ship"                            then "🚢"
+  when "speedboat"                       then "🚤"
+  when "boat"                            then "⛵️"
+  when "sailboat"                        then "⛵️"
+  when "rowboat"                         then "🚣"
+  when "anchor"                          then "⚓️"
+  when "rocket"                          then "🚀"
+  when "airplane"                        then "✈️"
+  when "helicopter"                      then "🚁"
+  when "steam_locomotive"                then "🚂"
+  when "tram"                            then "🚊"
+  when "mountain_railway"                then "🚞"
+  when "bike"                            then "🚲"
+  when "aerial_tramway"                  then "🚡"
+  when "suspension_railway"              then "🚟"
+  when "mountain_cableway"               then "🚠"
+  when "tractor"                         then "🚜"
+  when "blue_car"                        then "🚙"
+  when "oncoming_automobile"             then "🚘"
+  when "car"                             then "🚗"
+  when "red_car"                         then "🚗"
+  when "taxi"                            then "🚕"
+  when "oncoming_taxi"                   then "🚖"
+  when "articulated_lorry"               then "🚛"
+  when "bus"                             then "🚌"
+  when "oncoming_bus"                    then "🚍"
+  when "rotating_light"                  then "🚨"
+  when "police_car"                      then "🚓"
+  when "oncoming_police_car"             then "🚔"
+  when "fire_engine"                     then "🚒"
+  when "ambulance"                       then "🚑"
+  when "minibus"                         then "🚐"
+  when "truck"                           then "🚚"
+  when "train"                           then "🚋"
+  when "station"                         then "🚉"
+  when "train2"                          then "🚆"
+  when "bullettrain_front"               then "🚅"
+  when "bullettrain_side"                then "🚄"
+  when "light_rail"                      then "🚈"
+  when "monorail"                        then "🚝"
+  when "railway_car"                     then "🚃"
+  when "trolleybus"                      then "🚎"
+  when "ticket"                          then "🎫"
+  when "fuelpump"                        then "⛽️"
+  when "vertical_traffic_light"          then "🚦"
+  when "traffic_light"                   then "🚥"
+  when "warning"                         then "⚠️"
+  when "construction"                    then "🚧"
+  when "beginner"                        then "🔰"
+  when "atm"                             then "🏧"
+  when "slot_machine"                    then "🎰"
+  when "busstop"                         then "🚏"
+  when "barber"                          then "💈"
+  when "hotsprings"                      then "♨️"
+  when "checkered_flag"                  then "🏁"
+  when "crossed_flags"                   then "🎌"
+  when "izakaya_lantern"                 then "🏮"
+  when "moyai"                           then "🗿"
+  when "circus_tent"                     then "🎪"
+  when "performing_arts"                 then "🎭"
+  when "round_pushpin"                   then "📍"
+  when "triangular_flag_on_post"         then "🚩"
+  when "jp"                              then "🇯🇵"
+  when "kr"                              then "🇰🇷"
+  when "cn"                              then "🇨🇳"
+  when "us"                              then "🇺🇸"
+  when "fr"                              then "🇫🇷"
+  when "es"                              then "🇪🇸"
+  when "it"                              then "🇮🇹"
+  when "ru"                              then "🇷🇺"
+  when "gb"                              then "🇬🇧"
+  when "uk"                              then "🇬🇧"
+  when "de"                              then "🇩🇪"
+  when "one"                             then "1️⃣"
+  when "two"                             then "2️⃣"
+  when "three"                           then "3️⃣"
+  when "four"                            then "4️⃣"
+  when "five"                            then "5️⃣"
+  when "six"                             then "6️⃣"
+  when "seven"                           then "7️⃣"
+  when "eight"                           then "8️⃣"
+  when "nine"                            then "9️⃣"
+  when "keycap_ten"                      then "🔟"
+  when "1234"                            then "🔢"
+  when "zero"                            then "0️⃣"
+  when "hash"                            then "#️⃣"
+  when "symbols"                         then "🔣"
+  when "arrow_backward"                  then "◀️"
+  when "arrow_down"                      then "⬇️"
+  when "arrow_forward"                   then "▶️"
+  when "arrow_left"                      then "⬅️"
+  when "capital_abcd"                    then "🔠"
+  when "abcd"                            then "🔡"
+  when "abc"                             then "🔤"
+  when "arrow_lower_left"                then "↙️"
+  when "arrow_lower_right"               then "↘️"
+  when "arrow_right"                     then "➡️"
+  when "arrow_up"                        then "⬆️"
+  when "arrow_upper_left"                then "↖️"
+  when "arrow_upper_right"               then "↗️"
+  when "arrow_double_down"               then "⏬"
+  when "arrow_double_up"                 then "⏫"
+  when "arrow_down_small"                then "🔽"
+  when "arrow_heading_down"              then "⤵️"
+  when "arrow_heading_up"                then "⤴️"
+  when "leftwards_arrow_with_hook"       then "↩️"
+  when "arrow_right_hook"                then "↪️"
+  when "left_right_arrow"                then "↔️"
+  when "arrow_up_down"                   then "↕️"
+  when "arrow_up_small"                  then "🔼"
+  when "arrows_clockwise"                then "🔃"
+  when "arrows_counterclockwise"         then "🔄"
+  when "rewind"                          then "⏪"
+  when "fast_forward"                    then "⏩"
+  when "information_source"              then "ℹ️"
+  when "ok"                              then "🆗"
+  when "twisted_rightwards_arrows"       then "🔀"
+  when "repeat"                          then "🔁"
+  when "repeat_one"                      then "🔂"
+  when "new"                             then "🆕"
+  when "top"                             then "🔝"
+  when "up"                              then "🆙"
+  when "cool"                            then "🆒"
+  when "free"                            then "🆓"
+  when "ng"                              then "🆖"
+  when "cinema"                          then "🎦"
+  when "koko"                            then "🈁"
+  when "signal_strength"                 then "📶"
+  when "u5272"                           then "🈹"
+  when "u5408"                           then "🈴"
+  when "u55b6"                           then "🈺"
+  when "u6307"                           then "🈯️"
+  when "u6708"                           then "🈷️"
+  when "u6709"                           then "🈶"
+  when "u6e80"                           then "🈵"
+  when "u7121"                           then "🈚️"
+  when "u7533"                           then "🈸"
+  when "u7a7a"                           then "🈳"
+  when "u7981"                           then "🈲"
+  when "sa"                              then "🈂️"
+  when "restroom"                        then "🚻"
+  when "mens"                            then "🚹"
+  when "womens"                          then "🚺"
+  when "baby_symbol"                     then "🚼"
+  when "no_smoking"                      then "🚭"
+  when "parking"                         then "🅿️"
+  when "wheelchair"                      then "♿️"
+  when "metro"                           then "🚇"
+  when "baggage_claim"                   then "🛄"
+  when "accept"                          then "🉑"
+  when "wc"                              then "🚾"
+  when "potable_water"                   then "🚰"
+  when "put_litter_in_its_place"         then "🚮"
+  when "secret"                          then "㊙️"
+  when "congratulations"                 then "㊗️"
+  when "m"                               then "Ⓜ️"
+  when "passport_control"                then "🛂"
+  when "left_luggage"                    then "🛅"
+  when "customs"                         then "🛃"
+  when "ideograph_advantage"             then "🉐"
+  when "cl"                              then "🆑"
+  when "sos"                             then "🆘"
+  when "id"                              then "🆔"
+  when "no_entry_sign"                   then "🚫"
+  when "underage"                        then "🔞"
+  when "no_mobile_phones"                then "📵"
+  when "do_not_litter"                   then "🚯"
+  when "non"                             then "🚱"
+  when "no_bicycles"                     then "🚳"
+  when "no_pedestrians"                  then "🚷"
+  when "children_crossing"               then "🚸"
+  when "no_entry"                        then "⛔️"
+  when "eight_spoked_asterisk"           then "✳️"
+  when "eight_pointed_black_star"        then "✴️"
+  when "heart_decoration"                then "💟"
+  when "vs"                              then "🆚"
+  when "vibration_mode"                  then "📳"
+  when "mobile_phone_off"                then "📴"
+  when "chart"                           then "💹"
+  when "currency_exchange"               then "💱"
+  when "aries"                           then "♈️"
+  when "taurus"                          then "♉️"
+  when "gemini"                          then "♊️"
+  when "cancer"                          then "♋️"
+  when "leo"                             then "♌️"
+  when "virgo"                           then "♍️"
+  when "libra"                           then "♎️"
+  when "scorpius"                        then "♏️"
+  when "sagittarius"                     then "♐️"
+  when "capricorn"                       then "♑️"
+  when "aquarius"                        then "♒️"
+  when "pisces"                          then "♓️"
+  when "ophiuchus"                       then "⛎"
+  when "six_pointed_star"                then "🔯"
+  when "negative_squared_cross_mark"     then "❎"
+  when "a"                               then "🅰️"
+  when "b"                               then "🅱️"
+  when "ab"                              then "🆎"
+  when "o2"                              then "🅾️"
+  when "diamond_shape_with_a_dot_inside" then "💠"
+  when "recycle"                         then "♻️"
+  when "end"                             then "🔚"
+  when "on"                              then "🔛"
+  when "soon"                            then "🔜"
+  when "clock1"                          then "🕐"
+  when "clock130"                        then "🕜"
+  when "clock10"                         then "🕙"
+  when "clock1030"                       then "🕥"
+  when "clock11"                         then "🕚"
+  when "clock1130"                       then "🕦"
+  when "clock12"                         then "🕛"
+  when "clock1230"                       then "🕧"
+  when "clock2"                          then "🕑"
+  when "clock230"                        then "🕝"
+  when "clock3"                          then "🕒"
+  when "clock330"                        then "🕞"
+  when "clock4"                          then "🕓"
+  when "clock430"                        then "🕟"
+  when "clock5"                          then "🕔"
+  when "clock530"                        then "🕠"
+  when "clock6"                          then "🕕"
+  when "clock630"                        then "🕡"
+  when "clock7"                          then "🕖"
+  when "clock730"                        then "🕢"
+  when "clock8"                          then "🕗"
+  when "clock830"                        then "🕣"
+  when "clock9"                          then "🕘"
+  when "clock930"                        then "🕤"
+  when "heavy_dollar_sign"               then "💲"
+  when "copyright"                       then "©️"
+  when "registered"                      then "®️"
+  when "tm"                              then "™️"
+  when "x"                               then "❌"
+  when "heavy_exclamation_mark"          then "❗️"
+  when "bangbang"                        then "‼️"
+  when "interrobang"                     then "⁉️"
+  when "o"                               then "⭕️"
+  when "heavy_multiplication_x"          then "✖️"
+  when "heavy_plus_sign"                 then "➕"
+  when "heavy_minus_sign"                then "➖"
+  when "heavy_division_sign"             then "➗"
+  when "white_flower"                    then "💮"
+  when "100"                             then "💯"
+  when "heavy_check_mark"                then "✔️"
+  when "ballot_box_with_check"           then "☑️"
+  when "radio_button"                    then "🔘"
+  when "link"                            then "🔗"
+  when "curly_loop"                      then "➰"
+  when "wavy_dash"                       then "〰️"
+  when "part_alternation_mark"           then "〽️"
+  when "trident"                         then "🔱"
+  when "white_check_mark"                then "✅"
+  when "black_square_button"             then "🔲"
+  when "white_square_button"             then "🔳"
+  when "black_circle"                    then "⚫️"
+  when "white_circle"                    then "⚪️"
+  when "red_circle"                      then "🔴"
+  when "large_blue_circle"               then "🔵"
+  when "large_blue_diamond"              then "🔷"
+  when "large_orange_diamond"            then "🔶"
+  when "small_blue_diamond"              then "🔹"
+  when "small_orange_diamond"            then "🔸"
+  when "small_red_triangle"              then "🔺"
+  when "small_red_triangle_down"         then "🔻"
+  else                                        nil
+  end
+end
