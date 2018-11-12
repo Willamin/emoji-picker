@@ -836,7 +836,7 @@ def emoji(name : String)
   when "wavy_dash"                       then "〰️"
   when "part_alternation_mark"           then "〽️"
   when "trident"                         then "🔱"
-  when "white_check_mark"                then "✅"
+  when "white_check_mark", "check"       then "✅"
   when "black_square_button"             then "🔲"
   when "white_square_button"             then "🔳"
   when "black_circle"                    then "⚫️"
@@ -849,7 +849,6 @@ def emoji(name : String)
   when "small_orange_diamond"            then "🔸"
   when "small_red_triangle"              then "🔺"
   when "small_red_triangle_down"         then "🔻"
-  when "check"                           then "✅"
   else                                        nil
   end
 end
